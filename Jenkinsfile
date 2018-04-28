@@ -16,7 +16,7 @@ pipeline {
    stage('Docker Build') {
       agent any
       steps {
-        sh 'docker build -t hemant/spring-petclinic:$DOKER_TAG .'
+        sh 'docker build -t hemant/spring-petclinic:${env.BUILD_NUMBER} .'
       }
     }
   }
